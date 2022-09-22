@@ -1,0 +1,44 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "test template contract",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx hardhat compile",
+    "deploy:testnet:Token": "npx hardhat run deploy/MockErc20.ts --network rinkeby",
+    "deploy:testnet:KingOfTheFules": "npx hardhat run deploy/KingOfTheFules.ts --network rinkeby",
+    "verify:network": "hardhat verify --network",
+    "flatten": "hardhat flatten"
+  },
+  "keywords": [
+    "erc20"
+  ],
+  "author": "Daiki Saito",
+  "license": "ISC",
+  "dependencies": {
+    "@chainlink/contracts": "^0.4.1",
+    "@nomiclabs/hardhat-etherscan": "^2.1.7",
+    "@openzeppelin/contracts": "^4.5.0",
+    "@openzeppelin/contracts-upgradeable": "^4.5.1",
+    "@openzeppelin/hardhat-upgrades": "^1.9.0",
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "@openzeppelin/upgrades-core": "^1.18.0",
+    "@types/chai": "^4.2.21",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^17.0.13",
+    "dotenv-extended": "^2.9.0",
+    "hardhat": "^2.5.0",
+    "hardhat-deploy": "^0.8.11",
+    "prettier-plugin-solidity": "^1.0.0-beta.17",
+    "ts-node": "^10.1.0",
+    "tslog": "^3.2.0"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.0",
+    "chai": "^4.2.0",
+    "ethereum-waffle": "^3.0.0",
+    "ethers": "^5.0.0",
+    "hardhat-contract-sizer": "^2.3.0"
+  }
+}
